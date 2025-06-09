@@ -91,35 +91,6 @@ A full-featured multi-tenant job portal similar to Indeed, built with modern web
 
 ---
 
-## 🧭 Auth Flow Overview
-
-1. **Custom Auth** → Email/password → JWT
-2. **Google Auth (Frontend only)** → Firebase popup → Send ID token to backend → Verify & generate JWT
-3. **Google Auth (Backend)** → Redirect to Google → Callback → JWT
-
----
-
-## 🗄 Database Schema (PostgreSQL)
-
-- **User**: id, name, email, password, role
-- **Company**: id, name, logo, about, userId
-- **Job**: id, title, description, companyId, createdAt
-- **Application**: id, userId, jobId, resumeLink, status
-- **Message**: id, fromUserId, toUserId, content, createdAt
-- **Notification**: id, userId, type, readStatus, linkTo
-
----
-
-## 📆 Development Timeline
-
-| Week | Tasks |
-|------|-------|
-| **1** | Boilerplate, auth system, Google login, DB models |
-| **2** | Job posting, job listing, apply system |
-| **3** | Real-time chat, notification system |
-| **4** | UI polish, dashboard, deployment, testing |
-
----
 
 ## 🧠 Future Enhancements
 
